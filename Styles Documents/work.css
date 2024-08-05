@@ -1,0 +1,76 @@
+:root{
+    --bg-color: #D3D3D3;
+    --font-color: #090909;
+    --big-text-color: #202020;
+    --primary-color: #F5B32F;
+}
+
+body{
+    height: 100%;
+    width: 100vw;
+    background-color: var(--bg-color);
+}
+.main{
+    width: 100vw;
+    min-height: 100vh;
+    
+}
+.main .herosection{
+    width: 80%;
+    height: 100vh;
+    
+}
+.main .herosection .bigtext{
+    font-size: 5rem;
+    text-align: center;
+    border: 1px solid grey;
+    color: var(--big-text-color);
+}
+.main .herosection .grid{
+    width: 100%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 5px;
+}
+.main .herosection .grid .workdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #250b5d;
+    font-size: 2vw;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s ease-in-out all;
+}
+.main .herosection .grid .workdiv:hover{
+  scale: 2;
+  box-shadow: 25px 25px 50px black, -25px -25px 50px black;
+}
+
+@media screen and (max-width: 465px) {
+    .main .herosection .bigtext{
+        font-size: 3rem;
+    }
+    
+    .main .herosection {
+        width: 100%;
+    }
+
+    .main .herosection  .grid{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        width: 100%;
+    }
+    .main .herosection  .grid .workdiv{
+        width: 100%;
+        font-size: 7vw;
+    }
+
+
+}

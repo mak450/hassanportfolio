@@ -1,0 +1,159 @@
+:root{
+    --bg-color: #F5F5F5;
+    --font-color: #090909;
+    --primary-color: #F5B32F;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+a, input, button{
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+a:visited{
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+
+body{
+   min-height: 100%;
+    width: 100vw;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.main .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 0  4vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    color: var(--font-color);
+}
+.main .left h2{
+    font-size: 2rem;
+}
+.main .left h1{
+    font-size: 4rem;
+}
+.main .left h1 span{
+    color: var(--primary-color);
+}
+.main .left .title{
+    padding: 0.8vw;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.main .left p{
+    font-size: 1rem;
+}
+.main .left .primarybtn{
+    background-color: var(--primary-color);
+    padding: 1vw;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    border-radius: 20px;
+
+}
+.main .right{
+    width: 50%;
+    height: 100%;
+
+}
+.main .right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main .iconcolumn {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-between;
+    position: absolute;
+    background-color: var(--primary-color);
+    padding: 0.5vw;
+    border-radius: 20px;
+    top: 50%;
+    right: 3%;
+    transform: translate(0, -50%);
+
+
+}
+
+.main .iconcolumn a{
+    color: #090909;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all ease-in-out 0.1s;
+}
+.main .iconcolumn a:hover{
+    scale: 1.2;
+}
+.main .iconcolumn a.active{
+color: white;
+}
+
+@media screen and (max-width: 730px) {
+    .main{
+        flex-direction: column;
+    }
+    .main .left, .main .right{
+        width: 100%;
+        height: 50%;
+    }
+    .main .iconcolumn{
+        flex-direction: row;
+        height: 40px;
+        width: 70%;
+        right: 50%;
+        align-items: center;
+        padding: 1vw;
+        justify-content: space-between;
+        top: 95%;
+        transform: translate(50%, -50%);
+    }
+}
+@media screen and (max-width: 400px) {
+    .main{
+        gap: 20px;
+    }
+    .main .left{
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .main .left h2{
+        font-size: 1.5rem;
+    }
+    .main .left h1{
+        font-size: 3rem;
+    }
+    .main .left .primarybtn{
+        font-size: 1rem;
+        padding: 2vw;
+        
+    }
+    .main .left .description{
+        font-size: 0.8rem;
+    }
+}
